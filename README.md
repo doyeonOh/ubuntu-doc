@@ -58,3 +58,4 @@
 6. touchpad 정상 작동(뿐만아니라 전원패널 등도 동작됨)
 
 - [참고](https://askubuntu.com/questions/763763/touchpad-under-16-04-not-working)
+

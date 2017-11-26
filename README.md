@@ -68,3 +68,5 @@
 4. sudo update-grub
 5. sudo shutdown -r now
 6. 전원 종료 정상 작동(뿐만아니라 대기모드도 동작)
+
+- [참고](https://askubuntu.com/questions/875173/nmi-watchdog-bug-soft-lockup-cpu2-stuck-for-23s-plymouthd305)

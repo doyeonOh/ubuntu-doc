@@ -59,3 +59,12 @@
 
 - [참고](https://askubuntu.com/questions/763763/touchpad-under-16-04-not-working)
 
+
+### 우분투 전원관리 이상현상(종료가 안되는 현상)
+
+1. 우분투 터미널 진입
+2. sudo nano /etc/default/grub 
+3. GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" ->  GRUB_CMDLINE_LINUX_DEFAULT="... quiet splash nouveau.modeset=0 " 로 변경
+4. sudo update-grub
+5. sudo shutdown -r now
+6. 전원 종료 정상 작동(뿐만아니라 대기모드도 동작)

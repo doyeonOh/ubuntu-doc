@@ -1,14 +1,28 @@
-# Dell xps 15 9560 ubuntu 17.10 설치
-
-여러 시행착오 후에 작성한 개인적인 기록으로 이 방법으로 일어난 이상현상에 대해서 책임지지 않습니다.
-
-
-## Dell xps 15 9560 spec
+# Dell xps 15 9560 spec
 
 - intel core i7-7700HQ CPU @ 2.80GHzx8
 - 32gb ram
 - 1TB ssd
 - touch screen
+
+# Dell xps 15 9560 ubuntu 18.04
+
+## Touchpad
+- 터치패드로 탭 할때 살짝 느린 현상 발견
+- 터치패드 드라이버 충돌나서 그런듯
+- synaptics 는 제거해준다.
+- sudo apt-get install xserver-xorg-input-libinput
+- sudo apt-get remove --purge xserver-xorg-input-synaptics
+- sudo reboot 
+- [참고](https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)#touchpad)
+
+
+# Dell xps 15 9560 ubuntu 17.10 설치
+
+여러 시행착오 후에 작성한 개인적인 기록으로 이 방법으로 일어난 이상현상에 대해서 책임지지 않습니다.
+
+
+
 
 
 ### 우분투 멀티 부팅 설치방법

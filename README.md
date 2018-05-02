@@ -17,6 +17,61 @@
 - [참고](https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)#touchpad)
 
 
+## Touchpad 제스처 툴인 libinput-gesture 설치
+- input 그룹에 포함되기 위해 현재 사용중인 userID 를 추가해줌
+```
+sudo gpasswd -a $USER input
+```
+- 그리고 로그아웃 혹은 재시작함
+- 제스쳐와 의존된 툴을 설치하기 위해 다음 실행
+```
+sudo apt-get install xdotool wmctrl
+sudo apt-get install libinput-tools
+```
+- 그리고 이 [libinput-gestures](https://github.com/bulletmark/libinput-gestures)를 설치해줌
+```
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install (or sudo ./libinput-gestures-setup install)
+```
+- 끝!
+- 설정파일을 설정하고 시작시키자.
+```
+libinput-gestures-setup autostart // 자동시작
+libinput-gestures-setup start // 시작
+libinput-gestures-setup stop // 정지
+libinput-gestures-setup restart // 재시작
+
+/etc/libinput-gestures.conf // 설정파일위치
+```
+
+- [참고](https://github.com/bulletmark/libinput-gestures)
+
+### 참고 - 나의 제스쳐 설정 파일 - libinput-gestures.conf
+```
+gesture swipe left	2 xdotool key alt+Right
+gesture swipe right	2 xdotool key alt+Left
+
+gesture swipe left	3 xdotool key ctrl+Page_Down
+gesture swipe right	3 xdotool key ctrl+Page_Up
+
+gesture swipe up	3 xdotool key super
+gesture swipe down 3 xdotool key super+v
+
+gesture swipe up 4 xdotool key super+a
+gesture swipe down 4 xdotool key super+alt+8
+
+gesture pinch in	2 xdotool key super+alt+minus
+gesture pinch out	2 xdotool key super+alt+plus
+
+gesture pinch in	3 xdotool key super+alt+minus
+gesture pinch out	3 xdotool key super+alt+plus
+
+gesture pinch in	4 xdotool key super+l
+gesture pinch out	4 xdotool key super+l
+```
+
+
 # Dell xps 15 9560 ubuntu 17.10 설치
 
 여러 시행착오 후에 작성한 개인적인 기록으로 이 방법으로 일어난 이상현상에 대해서 책임지지 않습니다.

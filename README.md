@@ -11,9 +11,13 @@
 - 터치패드로 탭 할때 살짝 느린 현상 발견
 - 터치패드 드라이버 충돌나서 그런듯
 - synaptics 는 제거해준다.
-- sudo apt-get install xserver-xorg-input-libinput
-- sudo apt-get remove --purge xserver-xorg-input-synaptics
-- sudo reboot 
+```
+sudo apt-get install xserver-xorg-input-libinput
+sudo apt-get remove --purge xserver-xorg-input-synaptics
+sudo reboot 
+```
+- 탭할때 딜레이가 사라졌다.
+- 끝.
 - [참고](https://github.com/rcasero/doc/wiki/Ubuntu-linux-on-Dell-XPS-15-(9560)#touchpad)
 
 
